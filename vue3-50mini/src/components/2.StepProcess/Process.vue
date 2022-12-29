@@ -5,7 +5,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed } from "@vue/runtime-core";
+import { computed } from "vue";
 const props = defineProps({
   pWidthPre: {
     type: Number,
@@ -32,7 +32,6 @@ const stylepWidthPre = computed(() => props.pWidthPre + "%");
     transform: translateY(-50%);
     top: 50%;
     border-radius: 5px;
-    box-sizing: border-box;
   }
   &:before {
     content: "";

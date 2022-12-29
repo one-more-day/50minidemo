@@ -12,8 +12,15 @@
       </Step>
     </div>
     <div>
-      <button @click="onPrevHandler">Prev</button>
-      <button @click="onNextHandler">Next</button>
+      <button @click="onPrevHandler" :disabled="state.current === 0">
+        Prev
+      </button>
+      <button
+        @click="onNextHandler"
+        :disabled="state.current === state.stepList.length - 1"
+      >
+        Next
+      </button>
     </div>
   </div>
 </template>
@@ -54,7 +61,7 @@ const onPrevHandler = () => {
   align-items: center;
 }
 .container {
-  margin: 50px;
+  padding: 50px;
   display: flex;
   justify-content: center;
   flex-direction: column;
