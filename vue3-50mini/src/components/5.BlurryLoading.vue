@@ -46,7 +46,7 @@ const blurShow = () => {
   justify-content: center;
   align-items: center;
   .headercon {
-    margin-top: -60px;
+    margin-top: -40px;
     margin-bottom: 20px;
     button {
       height: 40px;
@@ -57,14 +57,13 @@ const blurShow = () => {
     }
   }
   .content {
-    height: 600px;
+    height: 500px;
     width: 900px;
+    position: relative;
     .bgimage {
-      position: absolute;
       z-index: -1;
-      height: 600px;
+      height: 500px;
       width: 900px;
-      width: calc(100vw - 1000px);
       background: url("https://images.unsplash.com/photo-1576161787924-01bb08dad4a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2104&q=80")
         no-repeat center/cover;
       filter: blur(v-bind("blurnum + 'px'"));
