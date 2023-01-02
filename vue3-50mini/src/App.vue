@@ -5,8 +5,9 @@ const demo = [
   { name: "ExpendingCard", path: "/expend" },
   { name: "StepProcess", path: "/stepprocess" },
   { name: "rotating", path: "/rotating" },
+  { name: "hiddenSearch", path: "/hiddens" },
 ];
-const navOpen = ref(false);
+const navOpen = ref(true);
 </script>
 
 <template>
@@ -54,7 +55,7 @@ const navOpen = ref(false);
   .conbg {
     position: fixed;
     z-index: 99;
-    background-image: radial-gradient(#b5d5ee 10%, #4096ef 90%);
+    background-image: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
     height: 100%;
     width: 100%;
     .headerselect {
