@@ -6,6 +6,7 @@ const demo = [
   { name: "StepProcess", path: "/stepprocess" },
   { name: "rotating", path: "/rotating" },
   { name: "hiddenSearch", path: "/hiddens" },
+  { name: "blurryLoading", path: "/blurry" },
 ];
 const navOpen = ref(true);
 </script>
