@@ -4,6 +4,7 @@ import StepProcess from "../components/2.StepProcess/index.vue";
 import RotatingNavigation from "../components/3.RotatingNavigation.vue";
 import HiddenSearch from "../components/4.HiddenSearch.vue";
 import BlurryLoading from "../components/5.BlurryLoading.vue";
+import ScrollAnimation from "../components/6.ScrollAnimation.vue";
 const routes = [
   {
     path: "/expend",
@@ -29,6 +30,11 @@ const routes = [
     path: "/blurry",
     name: "blurryLoading",
     component: BlurryLoading,
+  },
+  {
+    path: "/scroll",
+    name: "ScrollAnimation",
+    component: ScrollAnimation,
   },
 ];
 export default createRouter({

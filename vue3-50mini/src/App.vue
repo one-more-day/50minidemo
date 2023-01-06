@@ -7,6 +7,7 @@ const demo = [
   { name: "rotating", path: "/rotating" },
   { name: "hiddenSearch", path: "/hiddens" },
   { name: "blurryLoading", path: "/blurry" },
+  { name: "ScrollAnimation", path: "/scroll" },
 ];
 const navOpen = ref(true);
 </script>
