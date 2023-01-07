@@ -12,7 +12,7 @@
   </div>
 </template>
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import { throttle } from "../utils";
 const itemRefs = ref([]);
 const setitemRefs = (el) => {
@@ -38,10 +38,16 @@ const checkBoxes = () => {
     }
   });
 };
+const Tcheck = throttle(checkBoxes, 20);
+
 onMounted(() => {
-  window.addEventListener("scroll", throttle(checkBoxes, 20));
+  window.addEventListener("scroll", Tcheck);
   checkBoxes();
   console.log(itemRefs.value);
+});
+onUnmounted(() => {
+  console.log("un");
+  window.removeEventListener("scroll", Tcheck);
 });
 </script>
 <style scoped lang="less">
